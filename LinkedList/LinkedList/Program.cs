@@ -24,7 +24,7 @@ public class MyLinkedList<T>
     public bool Contains(T data)
     {
         var current = first;
-        while(current.Next != null)
+        while(current != null)
         {
             if (current.Data.Equals(data))
                 return true;
