@@ -1,18 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hugom\\OneDrive\\Dokument\\GitHub\\LinkedList\\LinkedList\\LinkedListTest\\LinkedListTest.csproj": {}
+    "C:\\Users\\hugom\\source\\repos\\LinkedList\\LinkedListTest\\LinkedListTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hugom\\OneDrive\\Dokument\\GitHub\\LinkedList\\LinkedList\\LinkedListTest\\LinkedListTest.csproj": {
+    "C:\\Users\\hugom\\source\\repos\\LinkedList\\LinkedListTest\\LinkedListTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hugom\\OneDrive\\Dokument\\GitHub\\LinkedList\\LinkedList\\LinkedListTest\\LinkedListTest.csproj",
+        "projectUniqueName": "C:\\Users\\hugom\\source\\repos\\LinkedList\\LinkedListTest\\LinkedListTest.csproj",
         "projectName": "LinkedListTest",
-        "projectPath": "C:\\Users\\hugom\\OneDrive\\Dokument\\GitHub\\LinkedList\\LinkedList\\LinkedListTest\\LinkedListTest.csproj",
+        "projectPath": "C:\\Users\\hugom\\source\\repos\\LinkedList\\LinkedListTest\\LinkedListTest.csproj",
         "packagesPath": "C:\\Users\\hugom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hugom\\OneDrive\\Dokument\\GitHub\\LinkedList\\LinkedList\\LinkedListTest\\obj\\",
+        "outputPath": "C:\\Users\\hugom\\source\\repos\\LinkedList\\LinkedListTest\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\hugom\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -27,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\hugom\\OneDrive\\Dokument\\GitHub\\LinkedList\\LinkedList\\LinkedList\\LinkedList.csproj": {
-                "projectPath": "C:\\Users\\hugom\\OneDrive\\Dokument\\GitHub\\LinkedList\\LinkedList\\LinkedList\\LinkedList.csproj"
+              "C:\\Users\\hugom\\source\\repos\\LinkedList\\LinkedList\\LinkedList.csproj": {
+                "projectPath": "C:\\Users\\hugom\\source\\repos\\LinkedList\\LinkedList\\LinkedList.csproj"
               }
             }
           }
@@ -74,19 +77,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\hugom\\OneDrive\\Dokument\\GitHub\\LinkedList\\LinkedList\\LinkedList\\LinkedList.csproj": {
+    "C:\\Users\\hugom\\source\\repos\\LinkedList\\LinkedList\\LinkedList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hugom\\OneDrive\\Dokument\\GitHub\\LinkedList\\LinkedList\\LinkedList\\LinkedList.csproj",
+        "projectUniqueName": "C:\\Users\\hugom\\source\\repos\\LinkedList\\LinkedList\\LinkedList.csproj",
         "projectName": "LinkedList",
-        "projectPath": "C:\\Users\\hugom\\OneDrive\\Dokument\\GitHub\\LinkedList\\LinkedList\\LinkedList\\LinkedList.csproj",
+        "projectPath": "C:\\Users\\hugom\\source\\repos\\LinkedList\\LinkedList\\LinkedList.csproj",
         "packagesPath": "C:\\Users\\hugom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hugom\\OneDrive\\Dokument\\GitHub\\LinkedList\\LinkedList\\LinkedList\\obj\\",
+        "outputPath": "C:\\Users\\hugom\\source\\repos\\LinkedList\\LinkedList\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\hugom\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -126,7 +132,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

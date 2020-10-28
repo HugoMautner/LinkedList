@@ -188,3 +188,5 @@ C:\Users\hugom\OneDrive\Dokument\GitHub\LinkedList\LinkedList\LinkedListTest\obj
 C:\Users\hugom\OneDrive\Dokument\GitHub\LinkedList\LinkedList\LinkedListTest\obj\Debug\netcoreapp3.1\LinkedListTest.csproj.CopyComplete
 C:\Users\hugom\OneDrive\Dokument\GitHub\LinkedList\LinkedList\LinkedListTest\obj\Debug\netcoreapp3.1\LinkedListTest.dll
 C:\Users\hugom\OneDrive\Dokument\GitHub\LinkedList\LinkedList\LinkedListTest\obj\Debug\netcoreapp3.1\LinkedListTest.pdb
+C:\Users\hugom\source\repos\LinkedList\LinkedListTest\obj\Debug\netcoreapp3.1\LinkedListTest.csproj.CoreCompileInputs.cache
+C:\Users\hugom\source\repos\LinkedList\LinkedListTest\obj\Debug\netcoreapp3.1\LinkedListTest.genruntimeconfig.cache
