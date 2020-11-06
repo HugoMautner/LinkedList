@@ -86,7 +86,28 @@ public class MyLinkedList<T>
         return false;
     }
 
+    public Node<T> Find(T data)
+    {
+        var current = first;
+        while (current != null)
+        {
+            if (current.Data.Equals(data))
+                return current;
 
+            current = current.Next;
+        }
+        return null;
+    }
+
+    //public void Remove(Node<T>)
+    //{
+
+    //}
+
+    //public void Remove(T)
+    //{
+
+    //}
 }
 
 public class Node<T>
