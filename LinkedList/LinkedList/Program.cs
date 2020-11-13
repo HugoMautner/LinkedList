@@ -4,11 +4,8 @@ using System.Transactions;
 
 public class MyLinkedList<T>
 {
-    //To delete specific node
-    //current.Next = current.Next.Next
-    //if (current.Next == null) { throw exeption or smth }
-
     private Node<T> first = null;
+
     public T this [int index]
     {
         get
@@ -50,7 +47,7 @@ public class MyLinkedList<T>
     public Node<T> AddLast(T data)
     {
         if (Count == 0)
-            AddFirst(data);
+            return AddFirst(data);
 
         var node = new Node<T>(data);
 
@@ -99,15 +96,83 @@ public class MyLinkedList<T>
         return null;
     }
 
-    //public void Remove(Node<T>)
-    //{
+    public bool Remove(T data)
+    {
+        var current = first;
 
-    //}
+        if (current.Data.Equals(data))
+        {
+            first = first.Next;
+            Count--;
+            return true;
+        }
+        while (current != null)
+        {
+            if (current.Next.Data.Equals(data))
+            {
+                current.Next = current.Next.Next;
+                Count--;
+                return true;
+            }
+            current = current.Next;
+        }
+        return false;
+    }
 
-    //public void Remove(T)
-    //{
+    public void Remove(Node<T> node)
+    {
+        var current = first;
 
-    //}
+        if (node == null)
+            throw new ArgumentNullException();
+        else if (current == node)
+        {
+            first = first.Next;
+            Count--;
+        }
+        while (current != null)
+        {
+            if (current.Next.Equals(node))
+            {
+                current.Next = current.Next.Next;
+                Count--;
+            }
+            current = current.Next;
+        }
+        throw new InvalidOperationException();
+    }
+
+    public class Enumerator
+    {
+        private MyLinkedList<T> list;
+        private int position = -1;
+
+        public Enumerator(MyLinkedList<T> list)
+        {
+            this.list = list;
+        }
+
+        public void Reset()
+        {
+            position = -1;
+        }
+
+        public bool MoveNext()
+        {
+            position++;
+            return position < list.Count;
+        }
+
+        public T Current 
+        {
+            get
+            {
+                if (position == -1)
+                    throw new InvalidOperationException();
+                return list[position];
+            }
+        }
+    }
 }
 
 public class Node<T>

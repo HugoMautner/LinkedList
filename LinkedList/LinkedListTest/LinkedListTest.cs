@@ -5,27 +5,54 @@ using System.ComponentModel.DataAnnotations;
 [TestClass]
 public class LinkedListTest
 {
-    private void ListSetUp()
-    {
+    //[TestMethod]
+    //private void TestIndexingException()
+    //{
+    //    var list = new MyLinkedList<int>();
+    //    int value = 0;
 
+    //    //Assert
+    //    Assert.AreEqual(0, list.Count);
+
+    //    Assert.ThrowsException<IndexOutOfRangeException>(() => value = list[0]);
+
+
+    //    var e = list.GetEnumerator();
+
+    //    Assert.ThrowsException<InvalidOperationException>(() => e.Current);
+
+    //}
+
+    private MyLinkedList<int> ListSetUp()
+    {
+        //Assign
+        MyLinkedList<int> list = new MyLinkedList<int>();
+
+        //Act
+        list.AddFirst(1);
+        list.AddFirst(5);
+        list.AddFirst(7);
+        list.AddFirst(3);
+        list.AddFirst(2);
+        list.AddFirst(10);
+
+        return list;
     }
 
     [TestMethod]
     public void TestAddFirst()
     {
         //Assign
-        MyLinkedList<int> list = new MyLinkedList<int>();
+        var list = ListSetUp();
         int value = 5;
 
         //Act
-        var node = list.AddFirst(value);
-        list.AddFirst(1);
-        list.AddFirst(5);
-        list.AddFirst(7);
+        var node = list.Find(value);
 
         //Assert
         Assert.AreEqual(value, node.Data);
-        Assert.AreEqual(4, list.Count);
+        Assert.AreEqual(6, list.Count);
+        Assert.IsTrue(list.Contains(10));
 
         Assert.ThrowsException<IndexOutOfRangeException>(() => list[100] = 7);  //Anonym metod
     }
@@ -53,36 +80,13 @@ public class LinkedListTest
     public void TestClear()
     {
         //Assign
-        MyLinkedList<int> list = new MyLinkedList<int>();
+        var list = ListSetUp();
 
         //Act
-        list.AddLast(1);
-        list.AddLast(2);
-        list.AddLast(90);
-        list.AddLast(34);
-
-        Console.WriteLine("Number of nodes: " + list.Count);
-
         list.Clear();
 
         //Assert
-        Console.WriteLine("Number of nodes now: " + list.Count);
-    }
-
-    [TestMethod]
-    public void TestContains()
-    {
-        //Assign
-        MyLinkedList<int> list = new MyLinkedList<int>();
-
-        //Act
-        list.AddLast(1);
-        list.AddLast(2);
-        list.AddLast(5);
-        list.AddLast(34);
-
-        //Assert
-        Assert.AreEqual(true, list.Contains(5));
+        Assert.AreEqual(0, list.Count);
     }
 
     [TestMethod]
@@ -99,9 +103,15 @@ public class LinkedListTest
     public void TestRemove()
     {
         //Assign
+        var list = ListSetUp();
 
         //Act
+        list.Remove(1);
+        list.Remove(7);
 
         //Assert
+        Assert.IsFalse(list.Contains(1));
+        Assert.IsFalse(list.Contains(7));
+        Assert.AreEqual(4, list.Count);
     }
 }

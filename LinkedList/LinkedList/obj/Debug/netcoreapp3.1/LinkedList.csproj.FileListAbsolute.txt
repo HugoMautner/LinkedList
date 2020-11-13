@@ -20,5 +20,3 @@ C:\Users\hugom\OneDrive\Dokument\GitHub\LinkedList\LinkedList\LinkedList\obj\Deb
 C:\Users\hugom\OneDrive\Dokument\GitHub\LinkedList\LinkedList\LinkedList\obj\Debug\netcoreapp3.1\LinkedList.AssemblyInfo.cs
 C:\Users\hugom\OneDrive\Dokument\GitHub\LinkedList\LinkedList\LinkedList\obj\Debug\netcoreapp3.1\LinkedList.dll
 C:\Users\hugom\OneDrive\Dokument\GitHub\LinkedList\LinkedList\LinkedList\obj\Debug\netcoreapp3.1\LinkedList.pdb
-C:\Users\hugom\source\repos\LinkedList\LinkedList\obj\Debug\netcoreapp3.1\LinkedList.csproj.CoreCompileInputs.cache
-C:\Users\hugom\source\repos\LinkedList\LinkedList\obj\Debug\netcoreapp3.1\LinkedList.genruntimeconfig.cache
