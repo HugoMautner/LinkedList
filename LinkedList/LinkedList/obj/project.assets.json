@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hugom\\source\\repos\\LinkedList\\LinkedList\\LinkedList.csproj",
+      "projectUniqueName": "C:\\Users\\hugom\\OneDrive\\Dokument\\GitHub\\LinkedList\\LinkedList\\LinkedList\\LinkedList.csproj",
       "projectName": "LinkedList",
-      "projectPath": "C:\\Users\\hugom\\source\\repos\\LinkedList\\LinkedList\\LinkedList.csproj",
+      "projectPath": "C:\\Users\\hugom\\OneDrive\\Dokument\\GitHub\\LinkedList\\LinkedList\\LinkedList\\LinkedList.csproj",
       "packagesPath": "C:\\Users\\hugom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hugom\\source\\repos\\LinkedList\\LinkedList\\obj\\",
+      "outputPath": "C:\\Users\\hugom\\OneDrive\\Dokument\\GitHub\\LinkedList\\LinkedList\\LinkedList\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hugom\\AppData\\Roaming\\NuGet\\NuGet.Config",

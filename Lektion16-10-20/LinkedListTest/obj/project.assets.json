@@ -6896,11 +6896,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hugom\\source\\repos\\Lektion16-10-20\\LinkedListTest\\LinkedListTest.csproj",
+      "projectUniqueName": "C:\\Users\\hugom\\OneDrive\\Dokument\\GitHub\\LinkedList\\Lektion16-10-20\\LinkedListTest\\LinkedListTest.csproj",
       "projectName": "LinkedListTest",
-      "projectPath": "C:\\Users\\hugom\\source\\repos\\Lektion16-10-20\\LinkedListTest\\LinkedListTest.csproj",
+      "projectPath": "C:\\Users\\hugom\\OneDrive\\Dokument\\GitHub\\LinkedList\\Lektion16-10-20\\LinkedListTest\\LinkedListTest.csproj",
       "packagesPath": "C:\\Users\\hugom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hugom\\source\\repos\\Lektion16-10-20\\LinkedListTest\\obj\\",
+      "outputPath": "C:\\Users\\hugom\\OneDrive\\Dokument\\GitHub\\LinkedList\\Lektion16-10-20\\LinkedListTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hugom\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6916,8 +6916,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\hugom\\source\\repos\\Lektion16-10-20\\Lektion16-10-20\\Lektion16-10-20.csproj": {
-              "projectPath": "C:\\Users\\hugom\\source\\repos\\Lektion16-10-20\\Lektion16-10-20\\Lektion16-10-20.csproj"
+            "C:\\Users\\hugom\\OneDrive\\Dokument\\GitHub\\LinkedList\\Lektion16-10-20\\Lektion16-10-20\\Lektion16-10-20.csproj": {
+              "projectPath": "C:\\Users\\hugom\\OneDrive\\Dokument\\GitHub\\LinkedList\\Lektion16-10-20\\Lektion16-10-20\\Lektion16-10-20.csproj"
             }
           }
         }

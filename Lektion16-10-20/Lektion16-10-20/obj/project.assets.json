@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hugom\\source\\repos\\Lektion16-10-20\\Lektion16-10-20\\Lektion16-10-20.csproj",
+      "projectUniqueName": "C:\\Users\\hugom\\OneDrive\\Dokument\\GitHub\\LinkedList\\Lektion16-10-20\\Lektion16-10-20\\Lektion16-10-20.csproj",
       "projectName": "Lektion16-10-20",
-      "projectPath": "C:\\Users\\hugom\\source\\repos\\Lektion16-10-20\\Lektion16-10-20\\Lektion16-10-20.csproj",
+      "projectPath": "C:\\Users\\hugom\\OneDrive\\Dokument\\GitHub\\LinkedList\\Lektion16-10-20\\Lektion16-10-20\\Lektion16-10-20.csproj",
       "packagesPath": "C:\\Users\\hugom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hugom\\source\\repos\\Lektion16-10-20\\Lektion16-10-20\\obj\\",
+      "outputPath": "C:\\Users\\hugom\\OneDrive\\Dokument\\GitHub\\LinkedList\\Lektion16-10-20\\Lektion16-10-20\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hugom\\AppData\\Roaming\\NuGet\\NuGet.Config",

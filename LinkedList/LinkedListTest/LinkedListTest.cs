@@ -25,36 +25,24 @@ public class LinkedListTest
 
     private MyLinkedList<int> ListSetUp()
     {
-        //Assign
         MyLinkedList<int> list = new MyLinkedList<int>();
 
-        //Act
-        list.AddFirst(1);
-        list.AddFirst(5);
-        list.AddFirst(7);
-        list.AddFirst(3);
-        list.AddFirst(2);
-        list.AddFirst(10);
-
+        list.AddFirst(1); list.AddFirst(5); list.AddFirst(7); 
+        list.AddFirst(3); list.AddFirst(2); list.AddFirst(10);
         return list;
     }
 
     [TestMethod]
-    public void TestAddFirst()
+    public void TestAddFirst() //Also tests Contains()
     {
-        //Assign
+        //Assign + act
         var list = ListSetUp();
-        int value = 5;
-
-        //Act
-        var node = list.Find(value);
 
         //Assert
-        Assert.AreEqual(value, node.Data);
         Assert.AreEqual(6, list.Count);
         Assert.IsTrue(list.Contains(10));
-
-        Assert.ThrowsException<IndexOutOfRangeException>(() => list[100] = 7);  //Anonym metod
+        Assert.IsFalse(list.Contains(100));
+        Assert.ThrowsException<IndexOutOfRangeException>(() => list[100] = 7);
     }
 
     [TestMethod]
@@ -81,7 +69,7 @@ public class LinkedListTest
     {
         //Assign
         var list = ListSetUp();
-
+        
         //Act
         list.Clear();
 
@@ -93,10 +81,14 @@ public class LinkedListTest
     public void TestFind()
     {
         //Assign
+        var list = ListSetUp();
+        int value = 5;
 
         //Act
+        var node = list.Find(value);
 
         //Assert
+        Assert.AreEqual(value, node.Data);
     }
 
     [TestMethod]
