@@ -1,28 +1,11 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 [TestClass]
 public class LinkedListTest
 {
-    //[TestMethod]
-    //private void TestIndexingException()
-    //{
-    //    var list = new MyLinkedList<int>();
-    //    int value = 0;
-
-    //    //Assert
-    //    Assert.AreEqual(0, list.Count);
-
-    //    Assert.ThrowsException<IndexOutOfRangeException>(() => value = list[0]);
-
-
-    //    var e = list.GetEnumerator();
-
-    //    Assert.ThrowsException<InvalidOperationException>(() => e.Current);
-
-    //}
-
     private MyLinkedList<int> ListSetUp()
     {
         MyLinkedList<int> list = new MyLinkedList<int>();
@@ -42,7 +25,6 @@ public class LinkedListTest
         Assert.AreEqual(6, list.Count);
         Assert.IsTrue(list.Contains(10));
         Assert.IsFalse(list.Contains(100));
-        Assert.ThrowsException<IndexOutOfRangeException>(() => list[100] = 7);
     }
 
     [TestMethod]
@@ -75,6 +57,7 @@ public class LinkedListTest
 
         //Assert
         Assert.AreEqual(0, list.Count);
+        Assert.IsNull(list[0]);
     }
 
     [TestMethod]
@@ -101,9 +84,77 @@ public class LinkedListTest
         list.Remove(1);
         list.Remove(7);
 
+        var f = list.AddFirst(4);
+        var l = list.AddLast(20);
+        list.Remove(f);
+        list.Remove(l);
+
         //Assert
         Assert.IsFalse(list.Contains(1));
         Assert.IsFalse(list.Contains(7));
+
+        Assert.IsFalse(list.Contains(4));
+        Assert.IsFalse(list.Contains(20));
         Assert.AreEqual(4, list.Count);
+    }
+
+    [TestMethod]
+    public void TestIndexing()
+    {
+        //Assign
+        MyLinkedList<int> list = new MyLinkedList<int>();
+        list.AddFirst(1);
+        var node = list.AddLast(2);
+
+        //Act
+        var testCurrent = list.Get(2);
+        list.Clear();
+        var testNull = list.Get(1);
+
+        //Assert
+        Assert.AreEqual(testCurrent, node);
+        Assert.IsNull(testNull);
+    }
+
+    [TestMethod]
+    public void TestGetEnumerator()
+    {
+        //Assign
+        var list = ListSetUp();
+
+        //Act
+        var i = list.GetEnumerator();
+
+        //Assert
+        i.MoveNext();
+        Assert.AreEqual(i.Current.Data, 10);
+        i.MoveNext();
+        Assert.AreEqual(i.Current.Data, 2);
+    }
+
+    [TestMethod]
+    [ExpectedException(typeof(ArgumentNullException))]
+    public void TestRemoveArgumentNullException()
+    {
+        //Assign
+        var list = ListSetUp();
+
+        //Act
+        list.Remove(null);
+
+        //Assert
+    }
+
+    [TestMethod]
+    [ExpectedException(typeof(ArgumentOutOfRangeException))]
+    public void TestGetArgumentOutOfRangeException()
+    {
+        //Assign
+        var list = ListSetUp();
+
+        //Act
+        list.Get(-5);
+
+        //Assert
     }
 }

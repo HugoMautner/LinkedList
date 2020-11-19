@@ -1,33 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Transactions;
 
-public class MyLinkedList<T>
+public class MyLinkedList<T> : IEnumerable<Node<T>>
 {
     private Node<T> first = null;
-
-    public T this [int index]
-    {
-        get
-        {
-            return GetAt(index).Data;
-        }
-        set
-        {
-            GetAt(index).Data = value;
-        }
-    }
-
-    private Node<T> GetAt(int index)
-    {
-        if (index >= Count)
-            throw new IndexOutOfRangeException();
-
-        var current = first;
-        for (int i = 0; i < index; i++)
-            current = current.Next;
-        return current;
-    }
 
     public int Count
     {
@@ -52,7 +29,7 @@ public class MyLinkedList<T>
         var node = new Node<T>(data);
 
         var current = first;
-        while(current != null)
+        while (current != null)
         {
             if (current.Next == null)
                 break;
@@ -73,7 +50,7 @@ public class MyLinkedList<T>
     public bool Contains(T data)
     {
         var current = first;
-        while(current != null)
+        while (current != null)
         {
             if (current.Data.Equals(data))
                 return true;
@@ -98,25 +75,8 @@ public class MyLinkedList<T>
 
     public bool Remove(T data)
     {
-        var current = first;
-
-        if (current.Data.Equals(data))
-        {
-            first = first.Next;
-            Count--;
-            return true;
-        }
-        while (current != null)
-        {
-            if (current.Next.Data.Equals(data))
-            {
-                current.Next = current.Next.Next;
-                Count--;
-                return true;
-            }
-            current = current.Next;
-        }
-        return false;
+        Remove(Find(data));
+        return true;
     }
 
     public void Remove(Node<T> node)
@@ -129,6 +89,7 @@ public class MyLinkedList<T>
         {
             first = first.Next;
             Count--;
+            return;
         }
         while (current != null)
         {
@@ -136,41 +97,53 @@ public class MyLinkedList<T>
             {
                 current.Next = current.Next.Next;
                 Count--;
+                return;
             }
             current = current.Next;
         }
         throw new InvalidOperationException();
     }
 
-    public class Enumerator
+    public Node<T> Get(int index)
     {
-        private MyLinkedList<T> list;
-        private int position = -1;
+        if (index < 0)
+            throw new ArgumentOutOfRangeException();
 
-        public Enumerator(MyLinkedList<T> list)
+        if (Count == 0)
+            return null;
+
+        if (index >= Count)
+            index = Count - 1;
+
+        var current = first;
+        for (int i = 0; i < index; i++)
+            current = current.Next;
+        return current;
+    }
+    public Node<T> this[int index]
+    {
+        get { return this.Get(index); }
+    }
+
+    public IEnumerator<Node<T>> GetEnumerator()
+    {
+        var current = first;
+        while (current != null)
         {
-            this.list = list;
+            yield return current;
+            current = current.Next;
         }
+    }
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return GetEnumerator();
+    }
 
-        public void Reset()
+    public void PrintList(MyLinkedList<T> list)
+    {
+        foreach (var node in list)
         {
-            position = -1;
-        }
-
-        public bool MoveNext()
-        {
-            position++;
-            return position < list.Count;
-        }
-
-        public T Current 
-        {
-            get
-            {
-                if (position == -1)
-                    throw new InvalidOperationException();
-                return list[position];
-            }
+            Console.WriteLine(node.Data);
         }
     }
 }
@@ -189,6 +162,18 @@ class Program
 {
     static void Main()
     {
+        MyLinkedList<int> list = new MyLinkedList<int>();
 
+        //Act
+        list.AddLast(1);
+        list.AddLast(2);
+        list.AddLast(3);
+        list.AddLast(4);
+        list.AddLast(5);
+        list.AddLast(6);
+        list.Remove(4);
+        list.PrintList(list);
+
+        Console.WriteLine(list);
     }
 }
