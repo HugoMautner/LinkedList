@@ -162,18 +162,5 @@ class Program
 {
     static void Main()
     {
-        MyLinkedList<int> list = new MyLinkedList<int>();
-
-        //Act
-        list.AddLast(1);
-        list.AddLast(2);
-        list.AddLast(3);
-        list.AddLast(4);
-        list.AddLast(5);
-        list.AddLast(6);
-        list.Remove(4);
-        list.PrintList(list);
-
-        Console.WriteLine(list);
     }
 }
